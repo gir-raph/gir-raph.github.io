@@ -1,0 +1,134 @@
+/* Color palette: earthy greens + brick oranges */
+:root{
+  --bg:#0e1116;
+  --panel:#1b2330;
+  --accent:#24d05a;
+  --accent2:#f59e0b;
+  --text:#e9f0ff;
+  --muted:#9fb0c8;
+  --card:#18202b;
+  --shadow:#0a0d12;
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui,Segoe UI,Roboto,Arial,sans-serif; }
+
+.site-header{
+  position:sticky; top:0; z-index:10;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 18px; background:linear-gradient(180deg,#141a22,#0f141b);
+  border-bottom:2px solid #0b1016;
+}
+.logo{ font-weight:900; letter-spacing:0.5px; text-transform:uppercase; }
+.main-nav a{
+  color:var(--muted); margin-left:16px; text-decoration:none; font-weight:600;
+  padding:6px 10px; border-radius:8px;
+}
+.main-nav a:hover, .main-nav a.active{ color:var(--text); background:#121722; }
+
+.container{ max-width:1100px; margin:0 auto; padding:20px; }
+
+.hero{
+  background:linear-gradient(135deg,#15322a 0%, #1a2433 100%);
+  border:2px solid #0e151f; border-radius:16px; padding:28px;
+  box-shadow: 6px 6px 0 var(--shadow);
+  text-align:center;
+}
+.hero h1{ margin-top:0; font-size:2rem; text-shadow:2px 2px 0 #000; }
+.hero p{ color:var(--muted); }
+
+.btn{
+  display:inline-block; margin-top:12px; padding:10px 14px; border-radius:10px;
+  background:#253043; color:var(--text); text-decoration:none; border:2px solid #0d1420;
+  box-shadow: 4px 4px 0 #0b0f16; font-weight:700;
+}
+.btn:hover{ transform:translateY(-1px); background:#2b3a54; }
+.btn-primary{ background:var(--accent); color:#072010; border-color:#0c3f20; }
+.btn-primary:hover{ filter:brightness(1.05); }
+.btn.disabled{ opacity:0.6; pointer-events:none; }
+
+.grid.features{
+  margin-top:24px;
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap:16px;
+}
+
+.card{
+  background:var(--card);
+  border:2px solid #0e151f; border-radius:16px; padding:18px;
+  box-shadow: 6px 6px 0 var(--shadow);
+}
+.card h2{ margin:0 0 8px; }
+.card ul{ padding-left:18px; margin:6px 0 0; }
+.card p, .card li{ color:var(--muted); }
+
+.site-footer{
+  margin-top:28px; text-align:center; padding:16px; color:var(--muted);
+  border-top:1px solid #0e151f;
+}
+
+/* Simple “blocky” feel */
+.card, .btn, .hero { image-rendering: pixelated; }
+
+/* Make it comfy on small screens */
+@media (max-width:600px){
+  .main-nav a{ margin-left:8px; padding:6px; }
+  .hero h1{ font-size:1.6rem; }
+}
+
+/* City map */
+.city-map{ margin-top:20px; }
+.map-grid{
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap:6px;
+  background:#0c1219; padding:6px; border-radius:12px;
+  border:2px solid #0e151f; box-shadow: 6px 6px 0 #0a0d12;
+}
+.tile{
+  aspect-ratio:1/1; width:100%;
+  border:2px solid #0e151f;
+  border-radius:8px;
+  box-shadow: 4px 4px 0 #0a0d12;
+  cursor:pointer;
+  image-rendering: pixelated;
+  transition: transform 80ms ease, filter 120ms ease;
+}
+.tile:focus{ outline:3px solid var(--accent); }
+
+/* “Blocky” color themes to suggest materials */
+.tile.road{ background: repeating-linear-gradient(45deg,#2a3347,#2a3347 8px,#252f42 8px,#252f42 16px); }
+.tile.housing{ background: linear-gradient(135deg,#8b5a2b,#6b441f); }
+.tile.park{ background: linear-gradient(135deg,#2f6a3b,#2c8a4d); }
+.tile.transit{ background: linear-gradient(135deg,#3a3f66,#20243f); }
+.tile.energy{ background: linear-gradient(135deg,#f1c40f,#f59e0b); }
+.tile.plaza{ background: linear-gradient(135deg,#9aa3ad,#7b8794); }
+.tile.safety{ background: linear-gradient(135deg,#8c3c3c,#5b2626); }
+.tile.market{ background: linear-gradient(135deg,#3f6a84,#2a4a5d); }
+.tile.water{ background: linear-gradient(135deg,#1968a5,#0f4975); }
+
+.tile:hover{ transform: translateY(-2px); filter: brightness(1.05); }
+.legend{ color:var(--muted); text-align:center; margin-top:10px; }
+
+/* Modal */
+.modal{
+  position:fixed; inset:0; background: rgba(0,0,0,0.6);
+  display:grid; place-items:center; padding:16px;
+}
+.modal[hidden]{ display:none; }
+.modal-content{
+  width:min(560px, 95vw);
+  background:var(--panel); border:2px solid #0e151f; border-radius:14px; padding:18px;
+  box-shadow: 10px 10px 0 #06080c;
+}
+.modal-content h2{ margin-top:0; }
+.modal .close{
+  float:right; background:#2a354a; color:var(--text); border:2px solid #0d1420;
+  border-radius:8px; padding:6px 10px; cursor:pointer;
+}
+
+
+/* Mini-game HUD & planting visuals */
+.hud{ margin:10px 0; display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap; }
+.hud .chip{ background:#253043; border:2px solid #0d1420; border-radius:999px; padding:6px 10px; box-shadow: 4px 4px 0 #0b0f16; }
+.map-grid.plant-mode .tile.plantable{ outline:2px dashed var(--accent); outline-offset:-2px; cursor:crosshair; }
+.tile .tree{ font-size:20px; display:inline-block; filter: drop-shadow(0 1px 0 #000); }

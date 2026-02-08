@@ -1,0 +1,99 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Explore the City — SDG 11</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">🧱 SDG 11 City</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="city.html">Explore the City</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Explore the City</h1>
+      <p>Click a zone to learn how we make cities safer, greener, and fairer.</p>
+    </section>
+
+    <!-- The grid map -->
+    <section class="city-map">
+      <!-- 6x6 grid of tiles; give special zones data attributes -->
+      <div class="map-grid">
+        <!-- Row 1 -->
+        <button class="tile water" aria-label="Water"></button>
+        <button class="tile park" data-zone="Park" aria-label="Park"></button>
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile housing" data-zone="Housing" aria-label="Housing"></button>
+        <button class="tile transit" data-zone="Transit" aria-label="Transit"></button>
+        <button class="tile energy" data-zone="Energy" aria-label="Energy"></button>
+
+        <!-- Row 2 -->
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile plaza" data-zone="Heritage" aria-label="Heritage Plaza"></button>
+        <button class="tile park" aria-label="Park"></button>
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile road" aria-label="Road"></button>
+
+        <!-- Row 3 -->
+        <button class="tile housing" aria-label="Housing"></button>
+        <button class="tile housing" data-zone="Housing" aria-label="Housing"></button>
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile safety" data-zone="Safety" aria-label="Safety"></button>
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile market" data-zone="Community" aria-label="Community Market"></button>
+
+        <!-- Row 4 -->
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile transit" data-zone="Transit" aria-label="Transit"></button>
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile park" data-zone="Park" aria-label="Park"></button>
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile energy" aria-label="Energy"></button>
+
+        <!-- Row 5 -->
+        <button class="tile water" aria-label="Water"></button>
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile housing" aria-label="Housing"></button>
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile plaza" aria-label="Plaza"></button>
+        <button class="tile road" aria-label="Road"></button>
+
+        <!-- Row 6 -->
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile market" aria-label="Market"></button>
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile park" aria-label="Park"></button>
+        <button class="tile road" aria-label="Road"></button>
+        <button class="tile safety" aria-label="Safety"></button>
+      </div>
+      <p class="legend">
+        🟩 Park | 🧱 Housing | 🚈 Transit | ⚡ Energy | 🏛️ Heritage | 🛡️ Safety | 🛣️ Road | 🌊 Water | 🛍️ Community
+      </p>
+    </section>
+
+    <!-- Popup (hidden by default) -->
+    <div class="modal" id="zoneModal" hidden>
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="close" aria-label="Close">✖</button>
+        <h2 id="modalTitle">Zone</h2>
+        <p id="modalText">Details about this zone.</p>
+        <button class="btn btn-primary" id="miniAction">Try a quick challenge</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>SDG 11: Make cities inclusive, safe, resilient, and sustainable.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
