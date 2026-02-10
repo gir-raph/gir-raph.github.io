@@ -1,21 +1,13 @@
 
-:root{
-  --bg:#0e1116; --panel:#18202b; --text:#e9f0ff; --muted:#9fb0c8; --accent:#24d05a; --shadow:#0a0d12;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
+:root{--bg:#0e1116;--panel:#18202b;--text:#e9f0ff;--muted:#9fb0c8;--shadow:#0a0d12}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui}
 .header{text-align:center;padding:20px}
-.header h1{margin:0 0 6px;text-shadow:2px 2px 0 #000}
-.header p{color:var(--muted)}
-.grid{max-width:1100px;margin:0 auto;padding:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.grid{max-width:1100px;margin:auto;padding:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .card{background:var(--panel);border:2px solid #0e151f;border-radius:16px;padding:18px;box-shadow:6px 6px 0 var(--shadow);cursor:pointer}
 .card:hover{transform:translateY(-2px)}
 .avatar{font-size:40px}
 .tag{color:var(--muted)}
-
-/* Speech bubble */
 .bubble{position:fixed;inset:0;background:rgba(0,0,0,.6);display:grid;place-items:center}
 .bubble[hidden]{display:none}
 .bubble-content{background:#1b2330;border:2px solid #0e151f;border-radius:16px;padding:18px;box-shadow:10px 10px 0 #06080c;max-width:520px}
-.bubble-content::after{content:"";position:absolute;bottom:-14px;left:40px;border-width:14px 14px 0;border-style:solid;border-color:#1b2330 transparent transparent}
 .close{float:right;background:#2a354a;color:var(--text);border:2px solid #0d1420;border-radius:8px;padding:6px 10px;cursor:pointer}

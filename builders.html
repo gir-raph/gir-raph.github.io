@@ -1,64 +1,36 @@
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meet the City Builders — SDG 11</title>
-  <link rel="stylesheet" href="css/builders.css" />
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<title>Meet the City Builders — Expanded</title>
+<link rel='stylesheet' href='css/builders.css'/>
 </head>
 <body>
-  <header class="header">
-    <h1>Meet the City Builders</h1>
-    <p>Click a character to hear how they help build a sustainable city (SDG 11).</p>
-  </header>
-
-  <main class="grid">
-    <button class="card" data-builder="builder">
-      <div class="avatar">👷‍♂️</div>
-      <h2>Builder Villager</h2>
-      <p class="tag">Safe Housing</p>
-    </button>
-
-    <button class="card" data-builder="engineer">
-      <div class="avatar">⚙️</div>
-      <h2>Engineer Villager</h2>
-      <p class="tag">Clean Energy</p>
-    </button>
-
-    <button class="card" data-builder="librarian">
-      <div class="avatar">📚</div>
-      <h2>Librarian Villager</h2>
-      <p class="tag">Cultural Heritage</p>
-    </button>
-
-    <button class="card" data-builder="bee">
-      <div class="avatar">🐝</div>
-      <h2>City Bee</h2>
-      <p class="tag">Green Spaces & Biodiversity</p>
-    </button>
-
-    <button class="card" data-builder="golem">
-      <div class="avatar">🛡️</div>
-      <h2>Iron Golem</h2>
-      <p class="tag">Safety & Protection</p>
-    </button>
-
-    <button class="card" data-builder="minecart">
-      <div class="avatar">🚋</div>
-      <h2>Minecart Worker</h2>
-      <p class="tag">Sustainable Transport</p>
-    </button>
-  </main>
-
-  <div class="bubble" id="bubble" hidden>
-    <div class="bubble-content">
-      <button class="close">✖</button>
-      <h3 id="bubbleTitle"></h3>
-      <p id="bubbleText"></p>
-    </div>
-  </div>
-
-  <script src="js/builders.js"></script>
+<header class='header'>
+<h1>Meet the City Builders</h1>
+<p>Click a character to hear how they help build a sustainable city (SDG 11).</p>
+</header>
+<main class='grid'>
+<button class='card' data-builder='architect'><div class='avatar'>🏗️</div><h2>Architect Villager</h2><p class='tag'>Safe Housing</p></button>
+<button class='card' data-builder='solarEngineer'><div class='avatar'>🔆</div><h2>Solar Engineer</h2><p class='tag'>Clean Energy</p></button>
+<button class='card' data-builder='urbanGardener'><div class='avatar'>🌿</div><h2>Urban Gardener</h2><p class='tag'>Green Spaces</p></button>
+<button class='card' data-builder='heritageKeeper'><div class='avatar'>🏛️</div><h2>Heritage Keeper</h2><p class='tag'>Cultural Heritage</p></button>
+<button class='card' data-builder='trafficPlanner'><div class='avatar'>🚲</div><h2>Traffic Planner</h2><p class='tag'>Transport</p></button>
+<button class='card' data-builder='golemMarshal'><div class='avatar'>🛡️</div><h2>Iron Golem Marshal</h2><p class='tag'>Safety</p></button>
+<button class='card' data-builder='rainCollector'><div class='avatar'>💧</div><h2>Rain Collector</h2><p class='tag'>Water</p></button>
+<button class='card' data-builder='recyclerSlime'><div class='avatar'>♻️</div><h2>Recycling Slime</h2><p class='tag'>Waste</p></button>
+<button class='card' data-builder='disasterScientist'><div class='avatar'>⚡</div><h2>Disaster Scientist</h2><p class='tag'>Resilience</p></button>
+<button class='card' data-builder='beeQueen'><div class='avatar'>🐝</div><h2>Bee Queen</h2><p class='tag'>Biodiversity</p></button>
+</main>
+<div class='bubble' id='bubble' hidden>
+ <div class='bubble-content'>
+ <button class='close'>✖</button>
+ <h3 id='bubbleTitle'></h3>
+ <p id='bubbleText'></p>
+ </div>
+</div>
+<script src='js/builders.js'></script>
 </body>
 </html>

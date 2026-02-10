@@ -1,47 +1,21 @@
 
-const DATA = {
-  builder:{
-    title:"👷‍♂️ Builder Villager",
-    text:"Hi! I build strong, affordable homes. Safe housing protects families from storms and earthquakes and makes cities fair for everyone."
-  },
-  engineer:{
-    title:"⚙️ Engineer Villager",
-    text:"Hi! I’m the Engineer Villager. Want to see how solar panels and wind power keep our city clean and bright?"
-  },
-  librarian:{
-    title:"📚 Librarian Villager",
-    text:"Hello! I protect libraries, monuments, and old buildings so future generations remember our culture and history."
-  },
-  bee:{
-    title:"🐝 City Bee",
-    text:"Bzzz! Parks, trees, and flowers help me and my friends. Green spaces cool cities and keep nature alive."
-  },
-  golem:{
-    title:"🛡️ Iron Golem",
-    text:"I guard the community! Safe streets, strong buildings, and caring neighbors make cities resilient."
-  },
-  minecart:{
-    title:"🚋 Minecart Worker",
-    text:"All aboard! Trains, trams, bikes, and walking reduce traffic and pollution. Let’s move smart!"
-  }
+const DATA={
+ architect:{title:"🏗️ Architect Villager",text:"I design strong, safe, affordable homes that protect families from storms and heat. Everyone deserves a safe place to live!"},
+ solarEngineer:{title:"🔆 Solar Engineer Villager",text:"I cover rooftops with solar panels so our city runs on clean, renewable energy. Let’s make our future shine!"},
+ urbanGardener:{title:"🌿 Urban Gardener Villager",text:"I plant rooftop gardens, balcony plants, and park trees! Green places make cities cooler, cleaner, and full of life."},
+ heritageKeeper:{title:"🏛️ Heritage Keeper Librarian",text:"Old buildings tell amazing stories! I restore monuments so our culture stays alive for generations."},
+ trafficPlanner:{title:"🚲 Traffic Planner Villager",text:"Bikes, buses, and trains are my specialty! Smart transport reduces pollution and keeps streets safe."},
+ golemMarshal:{title:"🛡️ Iron Golem Marshal",text:"I defend neighborhoods, parks, and schools. Strong communities keep everyone safe!"},
+ rainCollector:{title:"💧 Rain Collector Villager",text:"Rainwater is precious! I collect and clean it to help gardens grow and to prepare for emergencies."},
+ recyclerSlime:{title:"♻️ Recycling Slime",text:"Squeeeesh! I sort waste into recycling bins for plastic, paper, metal, and compost. A cleaner city starts with us!"},
+ disasterScientist:{title:"⚡ Disaster Scientist",text:"Earthquakes? Floods? Heat waves? I build early‑warning systems so the whole city stays safe during disasters."},
+ beeQueen:{title:"🐝 Bee Queen",text:"Buzz buzz! I keep plants healthy by spreading pollen. More flowers and trees mean a happier, greener city!"}
 };
-
-const bubble = document.getElementById('bubble');
-const titleEl = document.getElementById('bubbleTitle');
-const textEl = document.getElementById('bubbleText');
-
-function openBubble(key){
-  const d = DATA[key];
-  if(!d) return;
-  titleEl.textContent = d.title;
-  textEl.textContent = d.text;
-  bubble.hidden = false;
-}
-function closeBubble(){ bubble.hidden = true; }
-
-bubble.addEventListener('click', e=>{ if(e.target===bubble) closeBubble(); });
-bubble.querySelector('.close').addEventListener('click', closeBubble);
-
-document.querySelectorAll('.card').forEach(card=>{
-  card.addEventListener('click', ()=> openBubble(card.dataset.builder));
-});
+const bubble=document.getElementById('bubble');
+const titleEl=document.getElementById('bubbleTitle');
+const textEl=document.getElementById('bubbleText');
+function openBubble(key){const d=DATA[key];if(!d)return;titleEl.textContent=d.title;textEl.textContent=d.text;bubble.hidden=false;}
+function closeBubble(){bubble.hidden=true;}
+bubble.addEventListener('click',e=>{if(e.target===bubble)closeBubble();});
+bubble.querySelector('.close').addEventListener('click',closeBubble);
+document.querySelectorAll('.card').forEach(card=>{card.addEventListener('click',()=>openBubble(card.dataset.builder));});
