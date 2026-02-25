@@ -1,36 +1,88 @@
 
 <!doctype html>
-<html lang='en'>
+<html lang="en">
 <head>
-<meta charset='utf-8'/>
-<meta name='viewport' content='width=device-width, initial-scale=1'/>
-<title>Meet the City Builders — Expanded</title>
-<link rel='stylesheet' href='css/builders.css'/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Meet the City Builders — SDG 11</title>
+  <link rel="stylesheet" href="css/builders.css"/>
 </head>
 <body>
-<header class='header'>
-<h1>Meet the City Builders</h1>
-<p>Click a character to hear how they help build a sustainable city (SDG 11).</p>
+<header class="header">
+  <h1>Meet the City Builders</h1>
+  <p>Click a character to hear how they help build a sustainable city (SDG 11).</p>
 </header>
-<main class='grid'>
-<button class='card' data-builder='architect'><div class='avatar'>🏗️</div><h2>Architect Villager</h2><p class='tag'>Safe Housing</p></button>
-<button class='card' data-builder='solarEngineer'><div class='avatar'>🔆</div><h2>Solar Engineer</h2><p class='tag'>Clean Energy</p></button>
-<button class='card' data-builder='urbanGardener'><div class='avatar'>🌿</div><h2>Urban Gardener</h2><p class='tag'>Green Spaces</p></button>
-<button class='card' data-builder='heritageKeeper'><div class='avatar'>🏛️</div><h2>Heritage Keeper</h2><p class='tag'>Cultural Heritage</p></button>
-<button class='card' data-builder='trafficPlanner'><div class='avatar'>🚲</div><h2>Traffic Planner</h2><p class='tag'>Transport</p></button>
-<button class='card' data-builder='golemMarshal'><div class='avatar'>🛡️</div><h2>Iron Golem Marshal</h2><p class='tag'>Safety</p></button>
-<button class='card' data-builder='rainCollector'><div class='avatar'>💧</div><h2>Rain Collector</h2><p class='tag'>Water</p></button>
-<button class='card' data-builder='recyclerSlime'><div class='avatar'>♻️</div><h2>Recycling Slime</h2><p class='tag'>Waste</p></button>
-<button class='card' data-builder='disasterScientist'><div class='avatar'>⚡</div><h2>Disaster Scientist</h2><p class='tag'>Resilience</p></button>
-<button class='card' data-builder='beeQueen'><div class='avatar'>🐝</div><h2>Bee Queen</h2><p class='tag'>Biodiversity</p></button>
+
+<main class="grid">
+  <button class="card" data-builder="architect">
+    <img class="avatar-img" src="assets/characters/architect.png" alt="Architect Villager"/>
+    <h2>Architect Villager</h2>
+    <p class="tag">Safe Housing</p>
+  </button>
+
+  <button class="card" data-builder="solarEngineer">
+    <img class="avatar-img" src="assets/characters/solarEngineer.png" alt="Solar Engineer"/>
+    <h2>Solar Engineer</h2>
+    <p class="tag">Clean Energy</p>
+  </button>
+
+  <button class="card" data-builder="urbanGardener">
+    <img class="avatar-img" src="assets/characters/urbanGardener.png" alt="Urban Gardener"/>
+    <h2>Urban Gardener</h2>
+    <p class="tag">Green Spaces</p>
+  </button>
+
+  <button class="card" data-builder="heritageKeeper">
+    <img class="avatar-img" src="assets/characters/heritageKeeper.png" alt="Heritage Keeper"/>
+    <h2>Heritage Keeper</h2>
+    <p class="tag">Culture</p>
+  </button>
+
+  <button class="card" data-builder="trafficPlanner">
+    <img class="avatar-img" src="assets/characters/trafficPlanner.png" alt="Traffic Planner"/>
+    <h2>Traffic Planner</h2>
+    <p class="tag">Transport</p>
+  </button>
+
+  <button class="card" data-builder="golemMarshal">
+    <img class="avatar-img" src="assets/characters/golemMarshal.png" alt="Golem Marshal"/>
+    <h2>Iron Golem Marshal</h2>
+    <p class="tag">Safety</p>
+  </button>
+
+  <button class="card" data-builder="rainCollector">
+    <img class="avatar-img" src="assets/characters/rainCollector.png" alt="Rain Collector"/>
+    <h2>Rain Collector</h2>
+    <p class="tag">Water</p>
+  </button>
+
+  <button class="card" data-builder="recyclerSlime">
+    <img class="avatar-img" src="assets/characters/recyclerSlime.png" alt="Recycling Slime"/>
+    <h2>Recycling Slime</h2>
+    <p class="tag">Waste</p>
+  </button>
+
+  <button class="card" data-builder="disasterScientist">
+    <img class="avatar-img" src="assets/characters/disasterScientist.png" alt="Disaster Scientist"/>
+    <h2>Disaster Scientist</h2>
+    <p class="tag">Resilience</p>
+  </button>
+
+  <button class="card" data-builder="beeQueen">
+    <img class="avatar-img" src="assets/characters/beeQueen.png" alt="Bee Queen"/>
+    <h2>Bee Queen</h2>
+    <p class="tag">Biodiversity</p>
+  </button>
 </main>
-<div class='bubble' id='bubble' hidden>
- <div class='bubble-content'>
- <button class='close'>✖</button>
- <h3 id='bubbleTitle'></h3>
- <p id='bubbleText'></p>
- </div>
+
+<div class="bubble" id="bubble" hidden>
+  <div class="bubble-content">
+    <button class="close">✖</button>
+    <h3 id="bubbleTitle"></h3>
+    <p id="bubbleText"></p>
+  </div>
 </div>
-<script src='js/builders.js'></script>
+
+<script src="js/builders.js"></script>
 </body>
 </html>
