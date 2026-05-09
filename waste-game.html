@@ -1,15 +1,44 @@
+
 <!doctype html>
-<html lang='en'>
-<head><meta charset='utf-8'>
-<title>♻️ Waste Sorting Master — SDG11</title>
-<link rel='stylesheet' href='css/game.css'></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>♻️ Waste Sorting Master — SDG11</title>
+  <link rel="stylesheet" href="css/game.css" />
+</head>
 <body>
-<header class='site-header'><div class='logo'>🧱 SDG 11 City</div>
-<nav class='main-nav'><a href='index.html'>Home</a>
-<a href='city.html'>Explore the City</a>
-<a href='builders.html'>City Builders</a>
-<a class='active' href='games.html'>Mini‑Games</a>
-<a href='#about'>About</a></nav></header><main class='game-area'>
-<h1 class='title'>♻️ Waste Sorting Master</h1>
-<button id='start-btn'>🚀 Start Cleaning the City!</button>
-<div id='item-area'><img id='current-item' class='hidden'></div><div id='bins'><img class='bin' data-type='paper_cardboard' src='assets/bins/paper_cardboard.png'><img class='bin' data-type='glass' src='assets/bins/glass.png'><img class='bin' data-type='plastic' src='assets/bins/plastic.png'><img class='bin' data-type='metal_cans' src='assets/bins/metal_cans.png'><img class='bin' data-type='organic' src='assets/bins/organic.png'><img class='bin' data-type='general_waste' src='assets/bins/general_waste.png'></div><div id='status-box'>Score: <span id='score'>0</span></div></main><script src='js/waste-game.js'></script></body></html>
+<header class="site-header">
+  <div class="logo">🧱 SDG 11 City</div>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="city.html">Explore the City</a>
+    <a href="builders.html">City Builders</a>
+    <a class="active" href="games.html">Mini‑Games</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main class="game-area">
+  <h1 class="title">♻️ Waste Sorting Master</h1>
+  <button id="start-btn">🚀 Start Cleaning the City!</button>
+
+  <div id="item-area">
+    <img id="current-item" class="hidden" />
+  </div>
+
+  <div id="bins">
+    <img class="bin" data-type="paper_cardboard" src="assets/bins/paper_cardboard.png" />
+    <img class="bin" data-type="glass" src="assets/bins/glass.png" />
+    <img class="bin" data-type="plastic" src="assets/bins/plastic.png" />
+    <img class="bin" data-type="metal_cans" src="assets/bins/metal_cans.png" />
+    <img class="bin" data-type="organic" src="assets/bins/organic.png" />
+    <img class="bin" data-type="general_waste" src="assets/bins/general_waste.png" />
+  </div>
+
+  <div id="status-box">Score: <span id="score">0</span></div>
+</main>
+
+<script src="js/waste-game.js"></script>
+</body>
+</html>
