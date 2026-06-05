@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>⚡ Energy Hero: Power the Future! — SDG 11</title>
+  <link rel="stylesheet" href="css/energy-game.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">🧱 SDG 11 City</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="city.html">Explore the City</a>
+      <a href="builders.html">City Builders</a>
+      <a class="active" href="games.html">Mini‑Games</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main class="game-area">
+    <h1 class="title">⚡ Energy Hero: Power the Future!</h1>
+    <p class="subtitle">Tap the energy source, then tap the correct box: <strong>Renewable</strong> or <strong>Non‑renewable</strong>.</p>
+
+    <button id="start-btn">🚀 Start the Energy Challenge!</button>
+
+    <div id="energy-area">
+      <img id="current-energy" class="hidden" alt="Energy source card" />
+      <div id="energy-label" class="hidden"></div>
+    </div>
+
+    <div id="boxes">
+      <img class="choice-box" data-type="Renewable" src="assets/boxes/renewable_box.png" alt="Renewable energy box" />
+      <img class="choice-box" data-type="Non-renewable" src="assets/boxes/nonrenewable_box.png" alt="Non-renewable energy box" />
+    </div>
+
+    <div id="status-box">Score: <span id="score">0</span> / 5</div>
+  </main>
+
+  <script src="js/energy-game.js"></script>
+</body>
+</html>
